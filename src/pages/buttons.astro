@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="bookLayout">
+    <!-- intro card -->
+    <article class="Column small">
+      <cyan-card elevation="1">
+        <h4 slot="title">Buttons</h4>
+        <cyan-icon slot="avatar" noun="page" />
+        <p class="TypeBody2">The humble button</p>
+      </cyan-card>
+    </article>
+    <!-- Core components -->
+    <article class="Column fieldset">
+      <button>plain</button>
+      <button class="secondary">button</button>
+      <button class="text">text</button>
+    </article>
+  </main>
+</Layout>
