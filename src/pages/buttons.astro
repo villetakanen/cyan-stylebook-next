@@ -13,10 +13,55 @@ import Layout from '../layouts/Layout.astro';
       </cyan-card>
     </article>
     <!-- Core components -->
-    <article class="Column fieldset">
-      <button>plain</button>
-      <button class="secondary">button</button>
-      <button class="text">text</button>
+    <article class="Column">
+      <h1>The Basics</h1>
+
+      <p>Buttons are used to trigger actions. They are used to submit forms, open
+        dialogs, cancel actions, or perform a delete action.</p>
+
+      <p>They can be used as part of a navigation to a wizard, or modal page (with a back-button).
+        Notably: search engines will not crawl to the pages linked with a button.
+      </p>
+
+      <h2>Examples</h2>
+      <section class="fieldset">
+      <cyan-toolbar>
+        <p><cyan-code>{'<button>'}</cyan-code></p>
+        <button>Plain</button>
+        <button>
+          noun+text
+          <cyan-icon dark noun="d20" />
+        </button>
+        <button aria-label="d6">
+          <cyan-icon dark noun="d6"/>
+        </button>
+      </cyan-toolbar>
+      
+      <cyan-toolbar>
+        <p><cyan-code>.secondary</cyan-code></p>
+        <button class="secondary">Plain</button>
+        <button class="secondary">
+          noun+text
+          <cyan-icon noun="d20" dark/>
+        </button>
+        <button class="secondary" aria-label="d6">
+          <cyan-icon noun="d6" dark/>
+        </button>
+      </cyan-toolbar>
+        
+
+      <cyan-toolbar>
+        <p><cyan-code>.text</cyan-code></p>
+        <button class="text">Plain</button>
+        <button class="text">
+          noun+text
+          <cyan-icon noun="d20" />
+        </button>
+        <button class="text" aria-label="d6">
+          <cyan-icon noun="d6"/>
+        </button>
+      </cyan-toolbar>
+      </section>
     </article>
   </main>
 </Layout>
