@@ -1,0 +1,52 @@
+---
+
+import Layout from '../layouts/Layout.astro';
+
+
+
+---
+
+<script>
+import type { CyanMarkdownArea } from '../cyan-elements/src';
+import { marked } from 'marked';
+
+const input = document.getElementById('markdownInput');
+
+input?.addEventListener('input', (e) => {
+  const markdown = (e.target as CyanMarkdownArea).value;
+  const demo = document.getElementById('markdownDemo');
+  if (demo) demo.innerHTML = marked(markdown);
+});
+</script>
+
+<Layout title="Inputs">
+  <main class="bookLayout">
+    <!-- intro card -->
+    <article class="Column small">
+        <cyan-card elevation="1">
+          <h4 slot="title">Inputs</h4>
+          <cyan-icon slot="avatar" noun="edit" />
+          <p class="TypeBody2">Various varieties of inputs</p>
+        </cyan-card>
+      </article>
+
+    <article>
+      <h3>Markdown</h3>
+      <p>We also provide a text-area with extended markdown support.</p>
+      <section>
+        <cyan-markdown-area
+          label="Markdown"
+          placeholder="Enter some markdown"
+          value=""
+          id="markdownInput"
+        />
+        <br>
+        <cyan-card elevation="0">
+          <h4 slot="title">Rendered</h4>
+          <cyan-icon slot="avatar" noun="eye" />
+          <div id="markdownDemo" />
+        </cyan-card>
+        </section>
+    </article>
+  </main>
+</Layout>
