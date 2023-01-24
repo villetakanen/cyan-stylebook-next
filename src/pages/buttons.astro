@@ -62,6 +62,23 @@ import Layout from '../layouts/Layout.astro';
         </button>
       </cyan-toolbar>
       </section>
+
+      <h2>Icons in buttons</h2>
+      <p>Buttons support <cyan-code>{'<cyan-icon [small]>'}</cyan-code> (default or small size). The recommended
+        icon size for buttons with text is <cyan-code>small</cyan-code>.</p>
+
+      <toolbar>
+        <button>
+          <cyan-icon noun="d20" />
+        </button>
+        <button>
+          <cyan-icon noun="d20" small />
+        </button>
+        <button class="secondary">
+          <cyan-icon noun="d20" small />
+          Secondary
+        </button>
+      </toolbar>
     </article>
   </main>
 </Layout>
