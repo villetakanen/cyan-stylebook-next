@@ -8,9 +8,9 @@ export interface Props {
 
 const { title } = Astro.props;
 
-const production = false;
-const cyan_elements = production ? 'https://unpkg.com/@11thdeg/cyan@0.33.3/dist/cyan.js' : '/src/cyan-elements/src/index.ts';
-const cyan_elements_css = production ? 'https://unpkg.com/@11thdeg/cyan@0.33.3/dist/style.css' : '';
+const production = true;
+const cyan_elements = production ? 'https://unpkg.com/@11thdeg/cyan@0.33.6/dist/cyan.js' : '/src/cyan-elements/src/index.ts';
+const cyan_elements_css = production ? 'https://unpkg.com/@11thdeg/cyan@0.33.6/dist/style.css' : '';
 
 ---
 
