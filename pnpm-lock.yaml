@@ -3,11 +3,13 @@ lockfileVersion: 5.4
 specifiers:
   '@astrojs/vercel': ^2.4.0
   astro: ^1.9.0
+  marked: ^4.2.12
   sass: ^1.57.1
 
 dependencies:
   '@astrojs/vercel': 2.4.0
   astro: 1.9.2_sass@1.57.1
+  marked: 4.2.12
 
 devDependencies:
   sass: 1.57.1
@@ -2055,6 +2057,12 @@ packages:
 
   /markdown-table/3.0.3:
     resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
+    dev: false
+
+  /marked/4.2.12:
+    resolution: {integrity: sha512-yr8hSKa3Fv4D3jdZmtMMPghgVt6TWbk86WQaWhDloQjRSQhMMYCAro7jP7VDJrjjdV8pxVxMssXS8B8Y5DZ5aw==}
+    engines: {node: '>= 12'}
+    hasBin: true
     dev: false
 
   /matcher/3.0.0:
