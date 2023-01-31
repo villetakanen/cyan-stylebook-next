@@ -1,6 +1,7 @@
 ---
 import Rail from '../components/Rail.astro';
 import Tray from '../components/Tray.astro';
+import AppBar from '../components/AppBar.astro';
 
 export interface Props {
 	title: string;
@@ -8,9 +9,9 @@ export interface Props {
 
 const { title } = Astro.props;
 
-const production = false;
-const cyan_elements = production ? 'https://unpkg.com/@11thdeg/cyan@0.33.6/dist/cyan.js' : '/src/cyan-elements/src/index.ts';
-const cyan_elements_css = production ? 'https://unpkg.com/@11thdeg/cyan@0.33.6/dist/style.css' : '';
+const production = true;
+const cyan_elements = production ? 'https://unpkg.com/@11thdeg/cyan@0.34.1/dist/cyan.js' : '/src/cyan-elements/src/index.ts';
+const cyan_elements_css = production ? 'https://unpkg.com/@11thdeg/cyan@0.34.1/dist/style.css' : '';
 
 ---
 
@@ -38,11 +39,9 @@ const cyan_elements_css = production ? 'https://unpkg.com/@11thdeg/cyan@0.33.6/d
 		<Rail />
 		<Tray />
 		<div class="AppLayout">
-		  <cyan-top-app-bar title="aaa">
-		    <h3>Cyan Design System</h3>
-			<cyan-spacer/>
-			<cyan-lightmode-toggle />
-		  </cyan-top-app-bar>
+		  <AppBar />
+			
+
 		  <slot />
 		  <footer>
 			...

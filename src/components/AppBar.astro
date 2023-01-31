@@ -1,0 +1,26 @@
+<script lang="ts">
+let disabled = false
+
+function toggleDisabled () {
+  if (disabled) {
+    disabled = false
+    const elems = document.querySelectorAll('cn-reaction-button')
+    elems.forEach((elem) => {
+      elem.removeAttribute('disabled')
+    })
+  } else {
+    disabled = true
+    const elems = document.querySelectorAll('cn-reaction-button')
+    elems.forEach((elem) => {
+      elem.setAttribute('disabled', '')
+    })
+  }
+}
+</script>
+
+<cyan-top-app-bar>
+  <h3>Cyan Design System</h3>
+  <cyan-spacer/>
+  <cyan-lightmode-toggle />
+  <button onclick="toggleDisabled()">Toggle Disabled</button>
+</cyan-top-app-bar>
