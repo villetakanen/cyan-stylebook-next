@@ -13,17 +13,6 @@ import Layout from '../layouts/Layout.astro';
       </cyan-card>
     </article>
 
-    <!-- Reactions -->
-    <article class="Column small">
-      <h2>Reactions</h2>
-      <cyan-toolbar>
-        <cn-reaction-button />
-        <cn-reaction-button count="0" />
-        <cn-reaction-button noun="download" count="713"/>
-      </cyan-toolbar>
-    </article>
-
-
     <!-- Core components -->
     <article class="Column">
       <h1>The Basics</h1>
@@ -32,7 +21,8 @@ import Layout from '../layouts/Layout.astro';
         dialogs, cancel actions, or perform a delete action.</p>
 
       <p>They can be used as part of a navigation to a wizard, or modal page (with a back-button).
-        Notably: search engines will not crawl to the pages linked with a button.
+        Notably: search engines will not crawl to the pages behind an onclick event of a button (which
+        can be used to soft-hide modal forms and the like).
       </p>
 
       <h2>Examples</h2>
@@ -92,5 +82,43 @@ import Layout from '../layouts/Layout.astro';
         </button>
       </toolbar>
     </article>
+
+     <!-- Reactions -->
+     <article class="Column">
+      <h2>Reactions</h2>
+      <p>Reaction buttons <cyan-code>{'<cn-reaction-button noun=[loves] [count:number] [disabled] aria-pressed=[] />'}</cyan-code>
+        are used for social reactions, like "like", etc. The button has three states: disabled,
+        pressed and unpressed: represented by attributes <cyan-code>disabled</cyan-code>, and the value of
+        <cyan-code>aria-pressed</cyan-code> respectively.</p>
+      
+      <h3>Demo</h3>
+      <cyan-toolbar>
+        <cn-reaction-button />
+        <cn-reaction-button count="0" />
+        <cn-reaction-button noun="download" count="713"/>
+      </cyan-toolbar>
+
+      <h3>Usage</h3>
+
+      <p>Expects to be encapsulated in a <cyan-code>{'<cyan-toolbar>'}</cyan-code> component, but will likely
+        work well in any flex-box or grid style container.</p>
+
+      <h4>Events</h4>
+      <p>A standard <cyan-code>change</cyan-code> event is dispatched on a reaction. The components listening
+        for the event, should use the <cyan-code>aria-pressed</cyan-code> prop for the reaction value.</p>
+
+      <p><strong>Code:</strong><br>
+        <cyan-code>const value = (event.target as CyanReactionButton).ariaPressed</cyan-code></p>
+
+      <h4>Attributes</h4>
+      <p><cyan-code>noun</cyan-code> <i>optional</i> noun for a cyan-icon. Defaults to 'loves'.</p>
+      <p><cyan-code>disabled</cyan-code> as a button:disabled.</p>
+      <p><cyan-code>aria-pressed</cyan-code> as a button:aria-pressed.</p>
+      <p><cyan-code>count</cyan-code> <i>an optional</i> number to display, auto incremented on pressed-state.</p>
+      <p><cyan-code>on</cyan-code> a shorthand prop for button:aria-pressed.</p>
+
+    </article>
+
+    <!-- END FILE -->
   </main>
 </Layout>
