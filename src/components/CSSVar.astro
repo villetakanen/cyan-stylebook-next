@@ -1,0 +1,12 @@
+---
+export interface Props {
+  variableName: string;
+}
+
+const { variableName } = Astro.props;
+---
+
+<p>
+  <cyan-code>{ variableName }</cyan-code>
+  <slot />
+</p>

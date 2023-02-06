@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "prettier --check ."
   },
   "dependencies": {
     "@astrojs/vercel": "^2.4.0",
@@ -16,6 +17,8 @@
     "marked": "^4.2.12"
   },
   "devDependencies": {
+    "prettier": "^2.8.3",
+    "prettier-plugin-astro": "^0.8.0",
     "sass": "^1.57.1"
   }
 }
