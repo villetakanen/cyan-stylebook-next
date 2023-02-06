@@ -1,51 +1,54 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <script>
-import type { CyanDialog } from "../cyan-elements/src";
+  import type { CyanDialog } from "../cyan-elements/src";
 
-const dialogButton = document.getElementById('demoDialogButton');
-dialogButton?.addEventListener('click', openDemoDialog);
+  const dialogButton = document.getElementById("demoDialogButton");
+  dialogButton?.addEventListener("click", openDemoDialog);
 
-function openDemoDialog() {
-  const dialog = document.getElementById('demoDialog') as CyanDialog;
-  dialog.showModal();
-}
+  function openDemoDialog() {
+    const dialog = document.getElementById("demoDialog") as CyanDialog;
+    dialog.showModal();
+  }
 </script>
 
 <Layout title="Inputs">
   <main class="bookLayout">
     <!-- intro card -->
     <article class="Column small">
-        <cyan-card elevation="1">
-          <h4 slot="title">Dialogs</h4>
-          <cyan-icon slot="avatar" noun="monsters" />
-          <p class="TypeBody2">The lovable popup that breaks your flow.</p>
-        </cyan-card>
-      </article>
+      <cyan-card elevation="1">
+        <h4 slot="title">Dialogs</h4>
+        <cyan-icon slot="avatar" noun="monsters"></cyan-icon>
+        <p class="TypeBody2">The lovable popup that breaks your flow.</p>
+      </cyan-card>
+    </article>
 
     <article class="Column">
       <h1>Demo</h1>
-      <p>Dialogs are a <em>worderfull</em> way to break the flow of your app and get the user's attention. 
-        They can be used for a variety of things, but the most common use case is to ask the user to 
-        confirm an action.</p>
+      <p>
+        Dialogs are a <em>worderfull</em> way to break the flow of your app and get
+        the user's attention. They can be used for a variety of things, but the most
+        common use case is to ask the user to confirm an action.
+      </p>
       <cyan-toolbar>
-        <button
-          class="secondary"
-          id="demoDialogButton">Open a Dialog</button>
+        <button class="secondary" id="demoDialogButton">Open a Dialog</button>
       </cyan-toolbar>
       <h4>Props</h4>
       <p><cyan-code>title</cyan-code> sets the title of a dialog.</p>
       <p><cyan-code>open</cyan-code> is updated to match the dialog state.</p>
-      <p><cyan-code>returnValue</cyan-code> is updated to match html dialog functionality.</p>
+      <p>
+        <cyan-code>returnValue</cyan-code> is updated to match html dialog functionality.
+      </p>
       <h4>Functionality</h4>
-      <p><cyan-code>[CyanDialog].close()</cyan-code> is used to close the dialog. This also
-        sets a <cyan-code>[CyanDialog].returnValue</cyan-code> and dispatches a <cyan-code>close</cyan-code> Event.</p>
+      <p>
+        <cyan-code>[CyanDialog].close()</cyan-code> is used to close the dialog.
+        This also sets a <cyan-code>[CyanDialog].returnValue</cyan-code> and dispatches
+        a <cyan-code>close</cyan-code> Event.
+      </p>
     </article>
   </main>
 
-  <cn-dialog id="demoDialog">
-    aaa
-  </cn-dialog>
+  <cn-dialog id="demoDialog">aaa</cn-dialog>
 </Layout>
