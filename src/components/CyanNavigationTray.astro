@@ -1,0 +1,73 @@
+<article class="Column">
+  <h3>Navigation Tray</h3>
+  <p>A Material Design 3 inspired tray element. Modal on small screens.</p>
+  
+  <h4>Children</h4>
+
+  <p>All slotted child elements are placed inside a nav-element. Please use
+    <cyan-code>.downscaled</cyan-code> headers for the tray.
+  </p>
+
+  <h4>Demo</h4>
+  <p>A demo section-element with the same styling as the <cyan-code>{'<cyan-navigation-tray>'}</cyan-code>,
+    and some examplet content.</p>
+
+  <section class="navTrayDemo">
+    <h2 class="downscaled">A Heading in the Tray</h2>
+    <a href="/applayout">
+        <cyan-nav-button
+          active={Astro.url.pathname + '' === '/applayout'}
+          noun="font">Link to this page</cyan-nav-button>
+      </a>
+
+    <h4 class="downscaled">Another H4</h4>
+    <a href="/css/preflight">
+        <cyan-nav-button
+          text
+          noun="stylebook">CSS Preflight</cyan-nav-button>
+      </a>
+      <a href="/buttons">
+        <cyan-nav-button text noun="mosters">Buttons</cyan-nav-button>
+      </a>
+      <a href="/dialog">
+        <cyan-nav-button text noun="card">Dialog</cyan-nav-button>
+      </a>
+      <a href="/inputs">
+        <cyan-nav-button text noun="edit">Inputs</cyan-nav-button>
+      </a>
+      <a href="/typography/tables">
+        <cyan-nav-button text noun="font">Type / Tables</cyan-nav-button>
+      </a>
+      <a href="/buttons">
+        <cyan-nav-button text noun="mosters">Buttons</cyan-nav-button>
+      </a>
+      <a href="/dialog">
+        <cyan-nav-button text noun="card">Dialog</cyan-nav-button>
+      </a>
+  </section>
+</article>
+
+<style>
+.navTrayDemo {
+  height: calc(272px * 2);
+  width: 272px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding: 8px;
+  background: var(--cyan-background-color-navigation-tray);
+  border-radius: 0 24px 24px 0;
+}
+.navTrayDemo::-webkit-scrollbar {
+  width: 8px;
+  height: 3px; /* The height is only seen on horizontal scrolling */
+}
+.navTrayDemo::-webkit-scrollbar-track {
+  background: transparent;
+  padding: 2px;
+  width: 24px;
+}
+.navTrayDemo::-webkit-scrollbar-thumb {
+  background: linear-gradient(hsla(var(--chroma-primary-i-hsl), 0) 0%, hsla(var(--chroma-primary-i-hsl), 0.5) 50%, hsla(var(--chroma-primary-i-hsl), 0) 100%);
+}
+</style>
