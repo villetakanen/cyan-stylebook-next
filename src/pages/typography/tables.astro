@@ -1,0 +1,81 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Cyan: Typography / Tables">
+  <main class="bookLayout">
+    <article class="Column small">
+      <cyan-card elevation="1">
+        <h4 slot="title">Tables</h4>
+        <cyan-icon slot="avatar" noun="font" size="large"></cyan-icon>
+        <p class="TypeBody2">Core styling for the HTML Table elements.</p>
+        <p class="TypeBody2">The styling is applied for <cyan-code>.cyan [table|tr|...]</cyan-code>.</p>
+      </cyan-card>
+    </article>
+    
+    <article class="Column">
+      <h2>Basic Usage</h2>
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2">The table header</th>
+            <th>A th</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>The table body</td>
+            <td>with two columns</td>
+            <td>And a third</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h4>Styling tables</h4>
+      <p><cyan-code>.cover</cyan-code></p>
+      <table class="cover">
+        <thead>
+          <tr>
+            <th>A th</th>
+            <th>A th</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>The table body</td>
+            <td>with two columns</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><cyan-code>.striped</cyan-code></p>
+      <table class="striped">
+        <thead>
+          <tr>
+            <th>A th</th>
+            <th>A th</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>The table body</td>
+            <td>with two columns</td>
+          </tr>
+          <tr>
+            <td>The table body</td>
+            <td>with two columns</td>
+          </tr>
+          <tr>
+            <td>The table body</td>
+            <td>with two columns</td>
+          </tr>
+          <tr>
+            <td>The table body</td>
+            <td>with two columns</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </article>
+  </main>
+</Layout>
