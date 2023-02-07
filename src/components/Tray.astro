@@ -1,14 +1,31 @@
 <cyan-navigation-tray id="tray">
   <h2 class="downscaled">The Navigation Tray</h2>
+
+  <h4 class="downscaled">App</h4>
+
+  <a href="/applayout">
+    <cyan-nav-button
+      active={Astro.url.pathname + '' === '/applayout'}
+      noun="font">Layout</cyan-nav-button>
+  </a>
+
+
+  <h4 class="downscaled">Unsorter</h4>
   <a href="/css/preflight">
-    <cyan-nav-button text noun="stylebook">CSS Preflight</cyan-nav-button>
+    <cyan-nav-button
+      text
+      noun="stylebook">CSS Preflight</cyan-nav-button>
   </a>
   <a href="/buttons">
     <cyan-nav-button text noun="mosters">Buttons</cyan-nav-button>
   </a>
   <a href="/dialog">
     <cyan-nav-button text noun="card">Dialog</cyan-nav-button>
+  </a>
   <a href="/inputs">
     <cyan-nav-button text noun="edit">Inputs</cyan-nav-button>
+  </a>
+  <a href="/typography/tables">
+    <cyan-nav-button text noun="font">Type / Tables</cyan-nav-button>
   </a>
 </cyan-navigation-tray>

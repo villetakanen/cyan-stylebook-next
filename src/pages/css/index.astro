@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CSSVar from '../../components/CSSVar.astro';
+---
+
+<Layout title="Cyan Design System: CSS">
+    <main class="bookLayout">
+  <article class="Column small">
+    <cyan-card elevation="1">
+      <h3>CSS Variables</h3>
+      <p>These are the core variables used in the component library.</p>
+      <p>Please apply the class <cyan-code>.cyan</cyan-code> to body to apply the variables</p>
+    </cyan-card>
+  </article>
+  <article class="Column small">
+    <h4>Layout</h4>
+    <CSSVar variableName="--cn-page-grid" />
+    <CSSVar variableName="--cn-margin" />
+    <CSSVar variableName="--cn-padding" />
+    <CSSVar variableName="--cn-gap-row" />
+    <CSSVar variableName="--cn-gap-column" />
+    <CSSVar variableName="--cn-gap-toolbar" />
+  </article>
+  <article class="Column">
+    <h3>Basic CSS Helpers</h3>
+    <h4>Margins</h4>
+    <p>Inspired by Tailwind and Vue MaterialUI:</p>
+    <CSSVar variableName=".m-0"> margin: 0; </CSSVar>
+    <CSSVar variableName=".mx-0"> margin-left: 0; margin-right:0</CSSVar>
+    <CSSVar variableName=".my-0"> margin-top: 0; margin-bottom:0</CSSVar>
+
+    <p>The classes <cyan-code>.m[x/y]-[1...2]</cyan-code> add default margins of <cyan-code>var(--cn-page-grid) / 2</cyan-code> and
+      <cyan-code>var(--cn-page-grid)</cyan-code> respectively.</p>
+
+    <h4>Padding</h4>
+    <CSSVar variableName=".p-0"> padding: 0; </CSSVar>
+    <CSSVar variableName=".px-0"> padding-left: 0; padding-right:0</CSSVar>
+    <CSSVar variableName=".py-0"> padding-top: 0; padding-bottom:0</CSSVar>
+
+    <p>The classes <cyan-code>.p[x/y]-[1...2]</cyan-code> add default paddings of <cyan-code>var(--cn-page-grid) / 2</cyan-code> and
+      <cyan-code>var(--cn-page-grid)</cyan-code> respectively.</p>
+
+  </article>
+</main>
+</Layout>
