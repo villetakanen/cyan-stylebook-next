@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ChromaColorDemo from '../components/ChromaColorDemo.astro';
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="bookLayout">
+	<article class="Column small">
+      <cyan-card>
+        <h2 slot="title">Color</h2>
+        <cyan-icon slot="avatar" noun="spacer"/>
+        <p>Cyan uses "chromatic palette" from the 11thdeg's Chroma project.</p>
+      </cyan-card>
+    </article>
+
+    <article class="Column">
+      <h2>Primary palette</h2>
+      <section class="flex">
+        <ChromaColorDemo color="--chroma-primary-a" />
+        <ChromaColorDemo color="--chroma-primary-b" />
+        <ChromaColorDemo color="--chroma-primary-c" />
+        <ChromaColorDemo color="--chroma-primary-d" />
+        <ChromaColorDemo color="--chroma-primary-e" />
+        <ChromaColorDemo color="--chroma-primary-f" />
+        <ChromaColorDemo color="--chroma-primary-g" />
+        <ChromaColorDemo color="--chroma-primary-h" />
+        <ChromaColorDemo color="--chroma-primary-i" />
+      </section>
+    </article>
+    <article class="Column">
+      <h2>Experimental</h2>
+      <h3>Primary palette</h3>
+      <section class="flex chroma-experimental">
+        <ChromaColorDemo color="--chroma-primary-10" />
+        <ChromaColorDemo color="--chroma-primary-20" />
+        <ChromaColorDemo color="--chroma-primary-30" />
+        <ChromaColorDemo color="--chroma-primary-40" />
+        <ChromaColorDemo color="--chroma-primary-50" />
+        <ChromaColorDemo color="--chroma-primary-60" />
+        <ChromaColorDemo color="--chroma-primary-70" />
+        <ChromaColorDemo color="--chroma-primary-80" />
+        <ChromaColorDemo color="--chroma-primary-90" />
+        <ChromaColorDemo color="--chroma-primary-95" />
+        <ChromaColorDemo color="--chroma-primary-99" />
+      </section>
+      <h3>Key (black) palette</h3>
+      <section class="flex chroma-experimental">
+        <ChromaColorDemo color="--chroma-key-10" />
+        <ChromaColorDemo color="--chroma-key-20" />
+        <ChromaColorDemo color="--chroma-key-30" />
+        <ChromaColorDemo color="--chroma-key-40" />
+        <ChromaColorDemo color="--chroma-key-50" />
+        <ChromaColorDemo color="--chroma-key-60" />
+        <ChromaColorDemo color="--chroma-key-70" />
+        <ChromaColorDemo color="--chroma-key-80" />
+        <ChromaColorDemo color="--chroma-key-90" />
+        <ChromaColorDemo color="--chroma-key-95" />
+        <ChromaColorDemo color="--chroma-key-99" />
+      </section>
+    </article>
+  </main>
+</Layout> 

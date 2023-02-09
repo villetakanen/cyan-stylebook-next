@@ -1,0 +1,123 @@
+---
+export interface Props {
+  color: string;
+}
+
+const { color = "--chroma-primary-a" } = Astro.props;
+---
+
+<!-- Store the color prop as a data attribute. -->
+<chroma-demo data-color={color}>
+  <div class="chroma-demo-field"></div>
+  <div class="chroma-demo-label TypeCaption"></div>
+</chroma-demo>
+
+<script>
+/**
+ * Converts an RGB color value to HSL. Conversion formula
+ * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
+ * Assumes r, g, and b are contained in the set [0, 255] and
+ * returns h, s, and l in the set [0, 1].
+ *
+ * @param   {number}  r       The red color value
+ * @param   {number}  g       The green color value
+ * @param   {number}  b       The blue color value
+ * @return  {Array}           The HSL representation
+ */
+ function rgbToHsl(r:number, g:number, b:number){
+    r /= 255, g /= 255, b /= 255;
+    var max = Math.max(r, g, b), min = Math.min(r, g, b);
+    var h, s, l = (max + min) / 2;
+
+    if(max == min){
+        h = s = 0; // achromatic
+    }else{
+        var d = max - min;
+        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+        switch(max){
+            case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+            case g: h = (b - r) / d + 2; break;
+            case b: h = (r - g) / d + 4; break;
+        }
+        h = (h || 1) / 6;
+    }
+
+    return [h, s, l];
+}
+
+function rgbNotationToHsl(rgbNotation: string) {
+  const rgb = rgbNotation.replace('rgb(', '').replace(')', '').split(',');
+  return rgbToHsl(parseInt(rgb[0]), parseInt(rgb[1]), parseInt(rgb[2]));
+}
+
+  class ChromaDemo extends HTMLElement {
+    constructor() {
+      super();
+
+      // Read the message from the data attribute.
+      const color = this.dataset.color;
+      const div = this.querySelector('.chroma-demo-field') as HTMLDivElement;
+      if (!div) throw new Error('No div found');
+      div.style.backgroundColor = `var(${color})`;
+      
+      const label = this.querySelector('.chroma-demo-label') as HTMLDivElement;
+      if (!label) throw new Error('No label found');
+      label.appendChild(document.createTextNode(''+ color || ''));
+      label.appendChild(document.createElement('br'));
+
+      const colorAsHsl = rgbNotationToHsl(getComputedStyle(div).backgroundColor || '');
+      
+      label.appendChild(document.createTextNode('hsl(' + 
+        (Math.floor((colorAsHsl[0] || 0) * 360)) + 
+        ', ' +
+        (Math.floor((colorAsHsl[1] || 0)* 100)) + '%, ' +
+        (Math.floor((colorAsHsl[2] || 0) * 100)) + '%)'
+      ));
+    }
+  }
+
+  customElements.define('chroma-demo', ChromaDemo);
+</script>
+
+<style>
+chroma-demo {
+  width: 128px;
+  flex-grow: 0;
+
+  --chroma-primary-10: hsl(185deg, 100%, 14%);
+  --chroma-primary-20:hsl(170deg, 100%, 20%);
+  --chroma-primary-30:hsl(159, 74%, 27%);
+  --chroma-primary-40:hsl(147, 56%, 36%);
+  --chroma-primary-50:hsl(134, 44%, 44%);
+  --chroma-primary-60:hsl(116, 41%, 52%);
+  --chroma-primary-70:hsl(100deg, 54%, 56%);
+  --chroma-primary-80:hsl(88deg, 68%, 58%);
+  --chroma-primary-90:hsl(76deg, 84%, 61%);
+  --chroma-primary-95:hsl(65deg, 100%, 63%);
+  --chroma-primary-99: hsl(65deg, 100%, 83%);
+
+  --chroma-key-10: hsl(202, 100%, 11%);
+  --chroma-key-20: hsl(202, 52%, 19%);
+  --chroma-key-30: hsl(202, 41%, 27%);
+  --chroma-key-40: hsl(202, 33%, 35%);
+  --chroma-key-50: hsl(202, 27%, 43%);
+  --chroma-key-60: hsl(202, 23%, 51%);
+  --chroma-key-70: hsl(202, 20%, 59%);
+  --chroma-key-80: hsl(202, 18%, 67%);
+  --chroma-key-90: hsl(202, 16%, 75%);
+  --chroma-key-95: hsl(202, 15%, 83%);
+  --chroma-key-99: hsl(202, 15%, 93%);
+  
+}
+.chroma-demo-field {
+  width: 128px;
+  height: 48px;
+  border-radius: 4px;
+}
+.chroma-demo-label {
+  width: 128px;
+  word-break: break-all;
+  overflow: hidden;
+  color: var(--cn-color);
+}
+</style>
