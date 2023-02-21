@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Welcome to Astro.">
   <main class="bookLayout">
-	<article class="Column">
+	<article class="Column large">
 	  <h1>Cyan Elements Stylebook</h1>
 	  <p>This <a href="https://astro.build/">Astro</a> site acts as a kind of a Diary for the UX and UI design for the
 		<strong>Cyan Design System</strong>.
@@ -22,10 +22,16 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	  </div>
 	</article>
-	<article class="Column">
-	  <h2>Installation</h2>
-	  <p>...</p>
-	  <h3>Prequisites</h3>
+	<article class="Column small">
+	  <h3>Installation</h3>
+	  <p class="TypeBody2">Simplest way to install the Cyan Elements is to use unpkg href="https://github.com/11thdeg/cyan-elements">https://github.com/11thdeg/cyan</p>
+      <pre class="code">{`<link rel="stylesheet" href="https://unpkg.com/@11thdeg/cyan@0.35.0/dist/style.css">
+<script type="module" src="https://unpkg.com/@11thdeg/cyan@0.35.0/dist/cyan.js"></script>`}</pre>
+
+	  <p class="TypeBody2">Alternatively you can just ask NPM to do it for you: 
+		<a href="https://www.npmjs.com/package/@11thdeg/cyan">https://www.npmjs.com/package/@11thdeg/cyan</a>
+	  </p>
+
 	  <h4>Fonts</h4>
 	  <pre class="code">{`<!-- Google fonts for Cyan-->
 <link rel="preconnect" href="https://fonts.googleapis.com">

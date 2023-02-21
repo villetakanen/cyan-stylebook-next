@@ -1,0 +1,24 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="Inputs">
+  <main class="bookLayout">
+    <!-- intro card -->
+      <article class="Column small">
+        <cyan-card>
+          <h2 slot="title">Chips</h2>
+        </cyan-card>
+      </article>
+    <!-- end intro card -->
+
+    <!-- Filter chips -->
+    <article class="Column">
+      <section class="flex">
+        <cn-chip filter noun="mekanismi">A Filter Chip</cn-chip>
+        <cn-chip filter checked>A Filter Chip</cn-chip>
+        <cn-chip filter disabled>A Filter Chip</cn-chip>
+      </section>
+    </article>
+    <!-- end Filter chips -->
+  </main>
+</Layout>

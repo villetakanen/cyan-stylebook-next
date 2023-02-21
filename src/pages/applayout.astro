@@ -4,7 +4,8 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Cyan: App Layout">
-  <main class="bookLayout">
+  <main>
+    <div class="bookLayout">
     <article class="small Column">
       <cyan-card>
         <h2 slot="title" class="downscaled">App Layout</h2>
@@ -33,6 +34,21 @@ import Layout from '../layouts/Layout.astro';
           </li>
         </ul>
       </article>
-    <CyanNavigationTray />
+
+      <article class="Column small">
+        <cyan-card elevation="1">
+          <h4>Fitting</h4>
+          <p>A base layout should fit on a desktop</p>
+          <ul>
+            <li>Rail</li>
+            <li>Tray</li>
+            <li>Content: .Column, .Column.small, .Column.small</li>
+          </ul>
+        </cyan-card>
+      </article>
+    </div>  
+    <div class="bookLayout">
+      <CyanNavigationTray />
+    </div>
   </main>
 </Layout>      
