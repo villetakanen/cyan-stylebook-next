@@ -8,6 +8,11 @@
       active={Astro.url.pathname + '' === '/applayout'}
       noun="font">Layout</cyan-nav-button>
   </a>
+  <a href="/applayout">
+    <cyan-nav-button
+      active={Astro.url.pathname + '' === '/layout/editor'}
+      noun="edit">Editor Layout</cyan-nav-button>
+  </a>
 
 
   <h4>Inputs</h4>
@@ -16,6 +21,9 @@
   </a>
   <a href="/inputs/chips">
     <cyan-nav-button text noun="check">Chips</cyan-nav-button>
+  </a>
+  <a href="/inputs/markdown">
+    <cyan-nav-button text noun="check">Markdown editor</cyan-nav-button>
   </a>
 
   <h4 class="downscaled">Unsorter</h4>
