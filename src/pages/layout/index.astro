@@ -1,0 +1,57 @@
+---
+import CyanNavigationTray from '../../components/CyanNavigationTray.astro';
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Cyan: App Layout">
+  <main>
+    <div class="bookLayout">
+    <article class="small Column">
+      <cyan-card>
+        <h2 slot="title" class="downscaled">App Layout</h2>
+        <cyan-icon slot="avatar" noun="font"></cyan-icon>
+        <p class="TypeBody2">Cyan comes with a set of app-layout classes and elements - to build a 
+            Material design inspired SPA -skeleton.</p>
+      </cyan-card>
+    </article>
+    <article class="Column">
+        <h3>Core concepts</h3>
+
+        <p>The App layout is build on 4 core concepts</p>
+        <ul>
+          <li>
+            Mobile nav-bar element <cyan-code>{'<cyan-navigation-bar>'}</cyan-code>, which is visible on mobile devices.
+          </li>
+          <li>
+            Pad/Desktop nav-rail element <cyan-code>{'<cyan-navigation-rail>'}</cyan-code>, which is visible on pad and desktop devices.
+          </li>
+          <li>
+             A helper class <cyan-code>.AppLayout</cyan-code>, that is used to fit the nav-bar and nav-rail elements on the page.
+          </li>
+          <li>
+            Layout classes <cyan-code>.bookLayout</cyan-code> / <cyan-code>.dashboardLayout</cyan-code> /
+            <cyan-code>.singleColumnLayout</cyan-code>, that are used to fit the content on the page.
+          </li>
+        </ul>
+      </article>
+
+      <article class="Column small">
+        <cyan-card elevation="1">
+          <h4>Fitting</h4>
+          <p>A base layout should fit on a desktop</p>
+          <ul>
+            <li>Rail</li>
+            <li>Tray</li>
+            <li>Content: .Column, .Column.small, .Column.small</li>
+          </ul>
+        </cyan-card>
+      </article>
+    </div>  
+    <div class="bookLayout">
+      <CyanNavigationTray />
+    </div>
+    <cn-side-sheet>
+      <h3>A side sheet</h3>
+    </cn-side-sheet>
+  </main>
+</Layout>      
