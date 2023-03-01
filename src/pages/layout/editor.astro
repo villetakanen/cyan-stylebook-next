@@ -13,7 +13,13 @@ import Layout from '../../layouts/Layout.astro';
         <cyan-button noun="edit" text />
         <cyan-button noun="assets" text />
       </cyan-toolbar>
-      <cn-editor lang="markdown" id="editor"></cn-editor>
+      <cyan-markdown-area
+          label="Markdown"
+          placeholder="Enter some markdown"
+          value=""
+          id="markdownInput"
+        />
+      <!--cn-editor lang="markdown" id="editor"></cn-editor-->
     </article>
     <cn-side-sheet>
       <h2>The Markdown Editor</h2>
