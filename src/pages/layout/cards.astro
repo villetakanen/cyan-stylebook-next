@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="Cards">
+  <main class="bookLayout">
+    <article class="Column large">
+      <h1>Cards</h1>
+      <p>We support a material style card for highligting a data entry.</p>
+      <h4>The card grid</h4>
+      <p><cyan-code>.ItemGrid</cyan-code> helper class for a grid of <cyan-code>{'<cyan-card>'}</cyan-code>'s.</p>
+        
+      <div class="ItemGrid">
+        <cn-card cover="/proprietary/images/example_1.jpeg">A Card</cn-card>
+        <cn-card cover="/proprietary/images/example_2.jpeg">And another</cn-card>
+        <cn-card cover="/proprietary/images/example_3.png">And a third</cn-card>
+      </div>
+
+    </article>
+    <article class="Column small">
+      <cn-card cover="/proprietary/images/example_1.jpeg">
+        <h2 slot="title">An example card.</h2>
+        <cyan-icon slot="noun" noun="d20"></cyan-icon>
+        <section slot="content">
+          <p>This is a card.</p>
+          <h2>And a header inside the card - which should look sensible</h2>
+          <p>And the content should cut at n. px?</p>
+        </section>
+      </cn-card>
+    </article>
+  </main>
+</Layout>
