@@ -10,13 +10,76 @@ import Layout from '../../layouts/Layout.astro';
       <p><cyan-code>.ItemGrid</cyan-code> helper class for a grid of <cyan-code>{'<cyan-card>'}</cyan-code>'s.</p>
         
       <div class="ItemGrid">
+        <cn-card
+          title="A Card"
+          snippet="A snippet (in **markdown**)"
+          noun="ll"
+          cover="/proprietary/images/example_1.jpeg">
+        </cn-card>
+        <cn-card
+          title="And another"
+          snippet="Some [additional *markdown* content](https://google.com), that should flow to multiple lines nicely"
+          noun="dd"
+          cover="/proprietary/images/example_2.jpeg"></cn-card>
+
         <cn-card cover="/proprietary/images/example_1.jpeg">A Card</cn-card>
         <cn-card cover="/proprietary/images/example_2.jpeg">And another</cn-card>
         <cn-card cover="/proprietary/images/example_3.png">And a third</cn-card>
       </div>
 
     </article>
+
+    <article class="Column">
+      <h3>Anatomy of a Card</h3>
+      <cn-card
+        style="max-width:340px"
+        title="A title"
+        noun="d20"
+        snippet="A snippet (in **markdown**)"
+        cover="/proprietary/images/example_1.jpeg"
+      >
+        <cyan-toolbar slot="actions">
+          <cyan-button>Button</cyan-button>
+          <cyan-spacer></cyan-spacer>
+          <cyan-button>Button</cyan-button>
+        </cyan-toolbar>
+      </cn-card>
+    </article>
+
+
     <article class="Column small">
+      <h3>Small card examples</h3>
+
+      <cn-card
+        class="chroma-box-b"
+        title="Pelit ja sivustot"
+        noun="mekanismi"
+        snippet="Voit luoda pelillesi oman sivuston, ja halutessasi julkaista sivuston Pelilaudalla. Julkaisemattomaan sivustoon pääsee vain suoralla linkillä, tai omien pelien listauksesta."
+        cover="/proprietary/images/wootha-public-domain-talk-to-me.jpeg"
+      >
+        <cyan-toolbar slot="actions">
+          <cyan-spacer></cyan-spacer>
+          <button class="text">
+            <cyan-icon noun="add"></cyan-icon>
+            <span>Luo sivusto</span>
+          </button>
+          <cyan-spacer></cyan-spacer>
+        </cyan-toolbar>
+      </cn-card>
+
+      <cn-card
+        class="chroma-box-a"
+        title="Myrrys"
+      >
+        <section class="ctacontent">
+          <h4>
+            <cyan-icon noun="myrrys"></cyan-icon> Myrrysmiehet
+          </h4>
+        </section>
+      </cn-card>
+
+
+
       <cn-card cover="/proprietary/images/example_1.jpeg">
         <h2 slot="title">An example card.</h2>
         <cyan-icon slot="noun" noun="d20"></cyan-icon>

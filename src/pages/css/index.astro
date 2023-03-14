@@ -6,6 +6,13 @@ import CSSVar from '../../components/CSSVar.astro';
 <Layout title="Cyan Design System: CSS">
     <main class="bookLayout">
   <article class="Column small">
+    <cn-card
+      title="CSS Styles and Variables"
+      snippet="These are the core classes and variables used in the component library."
+    >
+    </cn-card>
+
+
     <cyan-card elevation="1">
       <h3>CSS Variables</h3>
       <p>These are the core variables used in the component library.</p>
@@ -40,6 +47,14 @@ import CSSVar from '../../components/CSSVar.astro';
     <p>The classes <cyan-code>.p[x/y]-[1...2]</cyan-code> add default paddings of <cyan-code>var(--cn-page-grid) / 2</cyan-code> and
       <cyan-code>var(--cn-page-grid)</cyan-code> respectively.</p>
 
+  </article>
+
+  <article>
+    <h3>Color helpers</h3>
+    <p>These are the color helpers used in the component library.</p>
+    <CSSVar variableName=".chroma-box-a"><span class="chroma-box-a">A backround helper</span></CSSVar>
+    <CSSVar variableName=".chroma-box-b"><span class="chroma-box-b">A backround helper</span></CSSVar>
+    <CSSVar variableName=".chroma-box-c"><span class="chroma-box-c">A backround helper</span></CSSVar>
   </article>
 </main>
 </Layout>
