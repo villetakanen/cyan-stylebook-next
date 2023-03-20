@@ -51,6 +51,27 @@ import Layout from '../../layouts/Layout.astro';
       <h3>Small card examples</h3>
 
       <cn-card
+        title="Alfacon game convention returns!"
+        snippet="https://alfacon.fi returns with a bang! This years topic is..."
+        noun="monsters">
+        <div slot="actions">
+          <cyan-toolbar small class="TypeCaption">
+            <a href="https://alfacon.fi">
+              <cyan-icon noun="link" xsmall></cyan-icon>
+              <span>Alfacon</span>
+            </a>
+            <cyan-spacer></cyan-spacer>
+            <p class="TypeCaption">11.11.2022 - 13:22</p>
+          </cyan-toolbar>
+          <cyan-toolbar>
+            <cn-reaction-button count="11"></cn-reaction-button>
+            <cyan-spacer></cyan-spacer>
+            <cn-reaction-button noun="discussion" count="400"></cn-reaction-button>
+          </cyan-toolbar>
+        </div>
+      </cn-card>
+
+      <cn-card
         class="chroma-box-b"
         title="Pelit ja sivustot"
         noun="mekanismi"
