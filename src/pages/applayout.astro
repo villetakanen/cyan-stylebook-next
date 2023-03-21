@@ -1,54 +1,35 @@
 ---
-import CyanNavigationTray from '../components/CyanNavigationTray.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Cyan: App Layout">
-  <main>
-    <div class="bookLayout">
-    <article class="small Column">
-      <cyan-card>
-        <h2 slot="title" class="downscaled">App Layout</h2>
-        <cyan-icon slot="avatar" noun="font"></cyan-icon>
-        <p class="TypeBody2">Cyan comes with a set of app-layout classes and elements - to build a 
-            Material design inspired SPA -skeleton.</p>
+<Layout title="Welcome to Astro.">
+  <main class="bookLayout">
+    <!-- intro card -->
+    <article class="Column small">
+      <cyan-card elevation="1">
+        <h4 slot="title">Layout</h4>
+        <cyan-icon slot="avatar" noun="page" />
+        <p class="TypeBody2">App layout components, helpers and classes.</p>
       </cyan-card>
     </article>
+    <!-- Core components -->
     <article class="Column">
-        <h3>Core concepts</h3>
-
-        <p>The App layout is build on 4 core concepts</p>
-        <ul>
-          <li>
-            Mobile nav-bar element <cyan-code>{'<cyan-navigation-bar>'}</cyan-code>, which is visible on mobile devices.
-          </li>
-          <li>
-            Pad/Desktop nav-rail element <cyan-code>{'<cyan-navigation-rail>'}</cyan-code>, which is visible on pad and desktop devices.
-          </li>
-          <li>
-             A helper class <cyan-code>.AppLayout</cyan-code>, that is used to fit the nav-bar and nav-rail elements on the page.
-          </li>
-          <li>
-            Layout classes <cyan-code>.bookLayout</cyan-code> / <cyan-code>.dashboardLayout</cyan-code> /
-            <cyan-code>.singleColumnLayout</cyan-code>, that are used to fit the content on the page.
-          </li>
-        </ul>
-      </article>
-
-      <article class="Column small">
-        <cyan-card elevation="1">
-          <h4>Fitting</h4>
-          <p>A base layout should fit on a desktop</p>
-          <ul>
-            <li>Rail</li>
-            <li>Tray</li>
-            <li>Content: .Column, .Column.small, .Column.small</li>
-          </ul>
-        </cyan-card>
-      </article>
-    </div>  
-    <div class="bookLayout">
-      <CyanNavigationTray />
-    </div>
+      <h2>Core concepts</h2>
+      <ul>
+        <li>
+          <cyan-code>.AppLayout</cyan-code> - Class defines the main container for the app, used to make sure we 
+          dont have any overflow issues, and that all app content dodges the navigation components.
+        </li>
+        <li>
+          <cyan-code>{'<cyan-navigation-rail>'}</cyan-code>
+        </li>
+        <li>
+            <cyan-code>{'<cyan-navigation-tray>'}</cyan-code>
+        </li>
+        <li>
+            <cyan-code>{'<cyan-navigation-bar>'}</cyan-code>
+        </li>
+      </ul>
+    </article>
   </main>
-</Layout>      
+</Layout>

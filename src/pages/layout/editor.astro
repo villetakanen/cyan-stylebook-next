@@ -1,0 +1,34 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="Inputs">
+  <main class="EditorLayout">
+    <article class="Pane EditorPane">
+      <cyan-toolbar>
+        <cyan-textfield
+          class="flex-grow"
+          label="Title"
+          placeholder="Title goes here">
+        </cyan-textfield>
+        <cyan-button noun="edit" text />
+        <cyan-button noun="assets" text />
+      </cyan-toolbar>
+      <cyan-markdown-area
+          label="Markdown"
+          placeholder="Enter some markdown"
+          value=""
+          id="markdownInput"
+        />
+      <!--cn-editor lang="markdown" id="editor"></cn-editor-->
+    </article>
+  </main>
+  <cn-side-sheet>
+    <h4>The Markdown Editor</h4>
+    <section class="fieldset">
+      <input type="text" />
+      <select>
+        <option>aaa</option>
+      </select>
+    </section>
+  </cn-side-sheet>
+</Layout>

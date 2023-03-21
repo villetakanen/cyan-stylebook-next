@@ -1,0 +1,50 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="Helpers">
+  <main class="bookLayout">
+    <article class="Column large">
+      <h1>Layout Helpers</h1>
+
+      <h3>.ItemGrid</h3>
+      <p><cyan-code>.ItemGrid</cyan-code> helper class for a grid of <cyan-code>{'<cyan-card>'}</cyan-code>'s.</p>
+      <div class="ItemGrid">
+
+        <cyan-card
+          elevation="1"
+          cover="/proprietary/images/example_1.jpeg"
+        >
+          <h3 slot="title">Card #1</h3>
+          <cyan-icon noun="avatar" slot="avatar"></cyan-icon>
+          <p>Here is some content</p>
+        </cyan-card>
+
+        <cyan-card
+          elevation="1"
+          cover="/proprietary/images/example_2.jpeg"
+        >
+          <h3 slot="title">Card #2, with a hilariously long title, that will definitely break out.</h3>
+          <cyan-icon noun="admin" slot="avatar"></cyan-icon>
+          <p>Here is some content</p>
+        </cyan-card>
+        
+        <cyan-card
+          elevation="1"
+        >
+          <h3 slot="title">Card #3, with a hilariously long title, that will definitely break out.</h3>
+          <cyan-icon noun="admin" slot="avatar"></cyan-icon>
+          <p>Here is some content</p>
+        </cyan-card>
+          <cyan-card>
+            <h2>Card #3</h2>
+          </cyan-card>
+          <cyan-card>
+            <h2>Card #4</h2>
+          </cyan-card>
+          <cyan-card>
+            <h2>Card #4</h2>
+          </cyan-card>
+      </div>
+    </article>
+  </main>
+</Layout>

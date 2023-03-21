@@ -1,0 +1,116 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="Cards">
+  <main class="bookLayout">
+    <article class="Column large">
+      <h1>Cards</h1>
+      <p>We support a material style card for highligting a data entry.</p>
+      <h4>The card grid</h4>
+      <p><cyan-code>.ItemGrid</cyan-code> helper class for a grid of <cyan-code>{'<cyan-card>'}</cyan-code>'s.</p>
+        
+      <div class="ItemGrid">
+        <cn-card
+          title="A Card"
+          snippet="A snippet (in **markdown**)"
+          noun="ll"
+          cover="/proprietary/images/example_1.jpeg">
+        </cn-card>
+        <cn-card
+          title="And another"
+          snippet="Some [additional *markdown* content](https://google.com), that should flow to multiple lines nicely"
+          noun="dd"
+          cover="/proprietary/images/example_2.jpeg"></cn-card>
+
+        <cn-card cover="/proprietary/images/example_1.jpeg">A Card</cn-card>
+        <cn-card cover="/proprietary/images/example_2.jpeg">And another</cn-card>
+        <cn-card cover="/proprietary/images/example_3.png">And a third</cn-card>
+      </div>
+
+    </article>
+
+    <article class="Column">
+      <h3>Anatomy of a Card</h3>
+      <cn-card
+        style="max-width:340px"
+        title="A title"
+        noun="d20"
+        snippet="A snippet (in **markdown**)"
+        cover="/proprietary/images/example_1.jpeg"
+        link="https://localhost:3000"
+      >
+        <cyan-toolbar slot="actions">
+          <cyan-button>Button</cyan-button>
+          <cyan-spacer></cyan-spacer>
+          <cyan-button>Button</cyan-button>
+        </cyan-toolbar>
+      </cn-card>
+    </article>
+
+
+    <article class="Column small">
+      <h3>Small card examples</h3>
+
+      <cn-card
+        title="Alfacon game convention returns!"
+        snippet="https://alfacon.fi returns with a bang! This years topic is..."
+        noun="monsters">
+        <div slot="actions">
+          <cyan-toolbar small class="TypeCaption">
+            <a href="https://alfacon.fi">
+              <cyan-icon noun="link" xsmall></cyan-icon>
+              <span>Alfacon</span>
+            </a>
+            <cyan-spacer></cyan-spacer>
+            <p class="TypeCaption">11.11.2022 - 13:22</p>
+          </cyan-toolbar>
+          <cyan-toolbar>
+            <cn-reaction-button count="11"></cn-reaction-button>
+            <cyan-spacer></cyan-spacer>
+            <cn-reaction-button noun="discussion" count="400"></cn-reaction-button>
+          </cyan-toolbar>
+        </div>
+      </cn-card>
+
+      <cn-card
+        class="chroma-box-b"
+        title="Pelit ja sivustot"
+        noun="mekanismi"
+        snippet="Voit luoda pelillesi oman sivuston, ja halutessasi julkaista sivuston Pelilaudalla. Julkaisemattomaan sivustoon pääsee vain suoralla linkillä, tai omien pelien listauksesta."
+        cover="/proprietary/images/wootha-public-domain-talk-to-me.jpeg"
+      >
+        <cyan-toolbar slot="actions">
+          <cyan-spacer></cyan-spacer>
+          <button class="text">
+            <cyan-icon noun="add"></cyan-icon>
+            <span>Luo sivusto</span>
+          </button>
+          <cyan-spacer></cyan-spacer>
+        </cyan-toolbar>
+      </cn-card>
+
+      <cn-card
+        class="chroma-box-a"
+        title="Myrrys"
+      >
+        <section class="ctacontent">
+          <h4>
+            <cyan-icon noun="myrrys"></cyan-icon> Myrrysmiehet
+          </h4>
+        </section>
+      </cn-card>
+
+
+
+      <cn-card cover="/proprietary/images/example_1.jpeg">
+        <h2 slot="title">An example card.</h2>
+        <cyan-icon slot="noun" noun="d20"></cyan-icon>
+        <section slot="content">
+          <p>This is a card.</p>
+          <h2>And a header inside the card - which should look sensible</h2>
+          <p>And the content should cut at n. px?</p>
+        </section>
+      </cn-card>
+    </article>
+  </main>
+</Layout>
