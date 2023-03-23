@@ -3,6 +3,47 @@ import Layout from '../../layouts/Layout.astro';
 ---
 <Layout title="Cards">
   <main class="bookLayout">
+    <article class="Column">
+      <h3>Anatomy of a Card</h3>
+      <p class="downscaled">A card is used to highlight an entry - and show the vital data of the entry,
+        on another page or in a list.
+      </p>
+      <h4 class="downscaled">Props</h4>
+      <p>
+        <cyan-code>title</cyan-code> - The title of the card. 
+      </p>
+      <p>
+        <cyan-code>snippet</cyan-code> - A short snippet of text, that should be shown in the card. Supports markdown.
+      </p>
+      <p>
+        <cyan-code>noun</cyan-code> - A noun for icon that should be shown in the card.
+      </p>
+      <p>
+        <cyan-code>cover</cyan-code> - A cover image for the card, replaces the default content slot.
+      </p>
+      <p>
+        <cyan-code>link</cyan-code> - A link for URL of the entry that the card represents.
+      </p>
+      <p>
+        <cyan-code>cn-card {'>'} [slot="actions"]</cyan-code> - A slot for actions, that should be shown in the card.
+      </p>
+      <cn-card
+        style="max-width:340px"
+        title="A title"
+        noun="d20"
+        snippet="A snippet (in **markdown**)"
+        cover="/proprietary/images/example_1.jpeg"
+        link="https://localhost:3000"
+      >
+        <cyan-toolbar slot="actions">
+          <button class="text">Button</button>
+          <cyan-spacer></cyan-spacer>
+          <cn-reaction-button count="11" noun="card" on></cn-reaction-button>
+        </cyan-toolbar>
+      </cn-card>
+    </article>
+
+
     <article class="Column large">
       <h1>Cards</h1>
       <p>We support a material style card for highligting a data entry.</p>
@@ -29,23 +70,7 @@ import Layout from '../../layouts/Layout.astro';
 
     </article>
 
-    <article class="Column">
-      <h3>Anatomy of a Card</h3>
-      <cn-card
-        style="max-width:340px"
-        title="A title"
-        noun="d20"
-        snippet="A snippet (in **markdown**)"
-        cover="/proprietary/images/example_1.jpeg"
-        link="https://localhost:3000"
-      >
-        <cyan-toolbar slot="actions">
-          <cyan-button>Button</cyan-button>
-          <cyan-spacer></cyan-spacer>
-          <cyan-button>Button</cyan-button>
-        </cyan-toolbar>
-      </cn-card>
-    </article>
+    
 
 
     <article class="Column small">
