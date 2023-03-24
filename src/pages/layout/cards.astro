@@ -4,10 +4,31 @@ import Layout from '../../layouts/Layout.astro';
 <Layout title="Cards">
   <main class="bookLayout">
     <article class="Column">
-      <h3>Anatomy of a Card</h3>
-      <p class="downscaled">A card is used to highlight an entry - and show the vital data of the entry,
+      <h1>Cards</h1>
+      <p>A card is used to highlight an entry - and show the vital data of the entry,
         on another page or in a list.
       </p>
+      <div class="flex flex-no-wrap">
+        <cn-card 
+          title="101"
+          snippet="A Card"
+          noun="fox"></cn-card>
+        <cn-card
+          title="102"
+          elevation="2"
+          noun="mekanismi"
+          snippet="A Second Card"></cn-card>
+        <cn-card 
+          title="203"
+          elevation="3"
+          noun="card"
+          snippet="A Third oOne"></cn-card>
+      </div>
+     </article>
+
+    <article class="Column">
+      <h2>Usage</h2>
+      
       <h4 class="downscaled">Props</h4>
       <p>
         <cyan-code>title</cyan-code> - The title of the card. 
@@ -41,12 +62,20 @@ import Layout from '../../layouts/Layout.astro';
           <cn-reaction-button count="11" noun="card" on></cn-reaction-button>
         </cyan-toolbar>
       </cn-card>
+
+      <h4>Slots</h4>
+      <cn-card
+        style="max-width:340px"
+        link="https://localhost:3000"
+      >
+      <p style="border: dashed 1px yellow">This content is in the default slot</p>
+      <p slot="actions" style="border: dashed 1px yellow">This content is in the actions slot</p>
+      </cn-card>
+
     </article>
 
 
     <article class="Column large">
-      <h1>Cards</h1>
-      <p>We support a material style card for highligting a data entry.</p>
       <h4>The card grid</h4>
       <p><cyan-code>.ItemGrid</cyan-code> helper class for a grid of <cyan-code>{'<cyan-card>'}</cyan-code>'s.</p>
         
