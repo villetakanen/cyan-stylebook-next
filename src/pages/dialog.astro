@@ -50,5 +50,12 @@ import Layout from "../layouts/Layout.astro";
     </article>
   </main>
 
-  <cn-dialog id="demoDialog">aaa</cn-dialog>
+  <cn-dialog id="demoDialog" title="A Dialog title?">
+    <h1>Hi!</h1>
+    <p>I'm a dialog?</p>
+    <p>Do you want to close me?</p>
+    <cyan-toolbar slot="actions">
+      <button>Hi!</button>
+    </cyan-toolbar>
+  </cn-dialog>
 </Layout>
