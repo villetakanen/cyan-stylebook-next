@@ -6,25 +6,25 @@ import Layout from '../layouts/Layout.astro';
   <main class="bookLayout">
     <!-- intro card -->
     <article class="Column small">
-      <cyan-card elevation="1">
-        <h4 slot="title">Layout</h4>
-        <cyan-icon slot="avatar" noun="page" />
-        <p class="TypeBody2">App layout components, helpers and classes.</p>
-      </cyan-card>
+      <cn-card
+        title="Layout" 
+        noun="page"
+        snippet="App layout components, helpers and classes.">
+      </cn-card>
     </article>
     <!-- Core components -->
     <article class="Column">
       <h2>Core concepts</h2>
+      <p><cyan-code>.AppLayout</cyan-code> - Class defines the main container for the app, used to make sure we 
+        dont have any overflow issues, and that all app content dodges the navigation components.</p>
+      <p>The <cyan-code>.AppLayout</cyan-code> supports following sub-layouts:</p>
       <ul>
         <li>
-          <cyan-code>.AppLayout</cyan-code> - Class defines the main container for the app, used to make sure we 
-          dont have any overflow issues, and that all app content dodges the navigation components.
+          <cyan-code>{'<nav class="rail">'}</cyan-code> - nav.rail contains the left navigation components.
+            visible only on wider than 600px screens (tablet/desktop and landscape mobile).
         </li>
         <li>
-          <cyan-code>{'<cyan-navigation-rail>'}</cyan-code>
-        </li>
-        <li>
-            <cyan-code>{'<cyan-navigation-tray>'}</cyan-code>
+            <cyan-code>{'<cyan-navigation-tray></cyan-navigation-tray>'}</cyan-code>
         </li>
         <li>
             <cyan-code>{'<cyan-navigation-bar>'}</cyan-code>
