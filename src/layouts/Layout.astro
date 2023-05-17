@@ -9,9 +9,10 @@ export interface Props {
 
 const { title } = Astro.props;
 
-const production = true;
-const cyan_elements = production ? 'https://unpkg.com/@11thdeg/cyan@0.37.0-alpha.1/dist/cyan.js' : '/src/cyan-elements/src/index.ts';
-const cyan_elements_css = production ? 'https://unpkg.com/@11thdeg/cyan@0.37.0-alpha.1/dist/style.css' : '';
+const production = false;
+const version = '0.37.0-beta.1'
+const cyan_elements = production ? 'https://unpkg.com/@11thdeg/cyan@'+version+'/dist/cyan.js' : '/src/cyan-elements/src/index.ts';
+const cyan_elements_css = production ? 'https://unpkg.com/@11thdeg/cyan@'+version+'/dist/style.css' : '';
 
 ---
 
@@ -37,7 +38,7 @@ const cyan_elements_css = production ? 'https://unpkg.com/@11thdeg/cyan@0.37.0-a
 	<title>{title}</title>
   </head>
 
-  <body class="cyan dark">
+  <body class="cyan">
 	<Rail />
 	<Tray />
 	<div class="AppLayout">
