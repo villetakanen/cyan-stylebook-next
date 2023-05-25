@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import ElevationCard from '../../components/ElevationCard.astro';
 ---
 <Layout title="Cards">
   <main class="bookLayout">
@@ -24,6 +25,14 @@ import Layout from '../../layouts/Layout.astro';
           noun="card"
           snippet="A Third oOne"></cn-card>
       </div>
+
+      <h4>Elevation</h4>
+
+      <p>Cards support 4 levels of elevation (including 0)</p>
+
+      <ElevationCard/>
+
+
      </article>
 
     <article class="Column">
