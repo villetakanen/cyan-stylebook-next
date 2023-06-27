@@ -26,6 +26,16 @@ import Layout from '../../layouts/Layout.astro';
         const appBar = document.querySelector('cn-app-bar');
         appBar.setAttribute('title', e);
     }
+
+  function toggleNoun(e) {
+    console.log('toggleNoun', e);
+    const appBar = document.querySelector('cn-app-bar');
+    if (e) {
+      appBar.setAttribute('noun', 'admin');
+    } else {
+      appBar.removeAttribute('noun');
+    }
+  }
 </script>
 
 <Layout title="CDS / cn-app-bar">
@@ -43,6 +53,7 @@ import Layout from '../../layouts/Layout.astro';
           onchange="changeTitle(this.value)"></cyan-textfield>
         <cyan-toggle id="sticky" label="Sticky" onchange="toggleSticky(this.checked)"></cyan-toggle>
         <cyan-toggle id="modal" label="Modal" onchange="toggleModal(this.checked)"></cyan-toggle>
+        <cyan-toggle id="noun" label="Noun" onchange="toggleNoun(this.checked)"></cyan-toggle>
       </fieldset>
       <h3>Params</h3>
       <p>
@@ -58,6 +69,9 @@ import Layout from '../../layouts/Layout.astro';
         </li>
         <li>
           <cyan-code>[sticky]</cyan-code> the app bar will be sticky. Note: the [modal] will force sticky as true.
+        </li>
+        <li>
+          <cyan-code>noun=[noun]</cyan-code> A noun (an icon) displaed in the app bar. This will be ignored if the app bar is modal.
         </li>
         <li>
           <cyan-code>@back</cyan-code> event will be emitted when the back button is clicked.
