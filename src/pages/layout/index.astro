@@ -46,7 +46,25 @@ import Layout from '../../layouts/Layout.astro';
           </ul>
         </cyan-card>
       </article>
+
+      <article class="Column small">
+        <h2>Z-index</h2>
+        <pre>
+          // Z-index
+  --cyan-z-index-base: 1000
+  --cyan-z-index-navigation: calc( 10 *  var(--cyan-z-index-base) )
+  --cyan-z-index-tray: calc( 20 *  var(--cyan-z-index-base) )
+  // Rail is on top of the tray, to enable tray to slide under the rail
+  --cyan-z-index-rail: calc( 30 *  var(--cyan-z-index-base) ) 
+  // Dialog is on top of everything except snack
+  --cyan-z-index-dialog: calc( 90 *  var(--cyan-z-index-base) )
+  // Snack is on top of everything
+  --cyan-z-index-snack: calc( 100 *  var(--cyan-z-index-base) ) 
+        </pre>
+      </article>
     </div>  
+
+
     <div class="bookLayout">
       <CyanNavigationTray />
     </div>
