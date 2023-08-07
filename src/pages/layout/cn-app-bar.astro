@@ -1,0 +1,92 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<script lang="javascript">
+  function toggleModal(e) {
+    console.log('toggleModal', e);
+    const appBar = document.querySelector('cn-app-bar');
+    if (e) {
+      appBar.setAttribute('modal', '');
+    } else {
+      appBar.removeAttribute('modal');
+    }
+  }
+  function toggleSticky(e) {
+    console.log('toggleSticky', e);
+    const appBar = document.querySelector('cn-app-bar');
+    if (e) {
+      appBar.setAttribute('sticky', '');
+    } else {
+      appBar.removeAttribute('sticky');
+    }
+    }
+
+    function changeTitle(e) {
+        console.log('changeTitle', e);
+        const appBar = document.querySelector('cn-app-bar');
+        appBar.setAttribute('title', e);
+    }
+
+  function toggleNoun(e) {
+    console.log('toggleNoun', e);
+    const appBar = document.querySelector('cn-app-bar');
+    if (e) {
+      appBar.setAttribute('noun', 'admin');
+    } else {
+      appBar.removeAttribute('noun');
+    }
+  }
+</script>
+
+<Layout title="CDS / cn-app-bar">
+  <main class="bookLayout">
+    <article class="Column large">
+      <h1 class="downscaled">Usage</h1>
+      <p>The <cyan-code>{ '<cn-app-bar>' }</cyan-code> component acts as the Top App Bar for the App. It renders the
+        content inside a { '<nav>'} -element.</p>
+
+      <fieldset>
+        <legend>Demo</legend>
+        <cyan-textfield
+          label="App Bar Title"
+          placeholder="Type a title here"
+          onchange="changeTitle(this.value)"></cyan-textfield>
+        <cyan-toggle id="sticky" label="Sticky" onchange="toggleSticky(this.checked)"></cyan-toggle>
+        <cyan-toggle id="modal" label="Modal" onchange="toggleModal(this.checked)"></cyan-toggle>
+        <cyan-toggle id="noun" label="Noun" onchange="toggleNoun(this.checked)"></cyan-toggle>
+      </fieldset>
+      <h3>Params</h3>
+      <p>
+        <cyan-code>{ '<cn-app-bar title=[string] [modal] [sticky] @back><slot/></cn-app-bar>' }</cyan-code>
+      </p>
+      <h3>Attributes</h3>
+      <ul>
+        <li>
+          <cyan-code>title=[string]</cyan-code> will be presented as a h3 in the app bar.
+        </li>
+        <li>
+          <cyan-code>[modal]</cyan-code> the view is modal, a back button will be presented.
+        </li>
+        <li>
+          <cyan-code>[sticky]</cyan-code> the app bar will be sticky. Note: the [modal] will force sticky as true.
+        </li>
+        <li>
+          <cyan-code>noun=[noun]</cyan-code> A noun (an icon) displaed in the app bar. This will be ignored if the app bar is modal.
+        </li>
+        <li>
+          <cyan-code>@back</cyan-code> event will be emitted when the back button is clicked.
+        </li>
+        <li>
+          <cyan-code>{ '<slot/>' }</cyan-code> the content of the app bar. Rendered as a vertical flexbox, alignend to the left.
+        </li>
+      </ul>
+    </article>
+    <article class="Column small">
+      <cn-card
+        title="cn-app-bar"
+        snippet="A simple app bar component inspired by Material Design 3 Top App Bar."
+      >
+      </cn-card>
+    </article>
+  </main>
+</Layout>
