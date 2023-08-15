@@ -9,7 +9,7 @@ export interface Props {
 
 const { title } = Astro.props;
 
-const production = false;
+const production = true;
 const version = '0.37.0-beta.5'
 const cyan_elements = production ? 'https://unpkg.com/@11thdeg/cyan@'+version+'/dist/cyan.js' : '/src/cyan-elements/src/index.ts';
 const cyan_elements_css = production ? 'https://unpkg.com/@11thdeg/cyan@'+version+'/dist/style.css' : '';

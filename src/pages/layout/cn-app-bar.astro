@@ -74,8 +74,13 @@ import Layout from '../../layouts/Layout.astro';
           <cyan-code>noun=[noun]</cyan-code> A noun (an icon) displaed in the app bar. This will be ignored if the app bar is modal.
         </li>
         <li>
+          <cyan-code>[menu]</cyan-code> the menu button will be presented.
+        </li>
+        <li>
           <cyan-code>@back</cyan-code> event will be emitted when the back button is clicked.
         </li>
+        <li>
+          <cyan-code>@menu</cyan-code> event will be emitted when the menu button is clicked.
         <li>
           <cyan-code>{ '<slot/>' }</cyan-code> the content of the app bar. Rendered as a vertical flexbox, alignend to the left.
         </li>
