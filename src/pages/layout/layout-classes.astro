@@ -1,0 +1,65 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="Layout classes">
+  <main>
+    <div class="container">
+      <cn-card
+        noun="card"
+        title="Content grid"
+        snippet="We support 3 different container grids, default, single, and dashbaord. Each of these supports 3 different screen sizes, small, medium, and large."
+      class="column small"/>
+      <article class="column la-large">
+        <h1>Containers and Content grids</h1>
+      </article>
+    </div>
+
+
+    <div class="container">
+      <p class="column full separator">Wiki Page example</p>
+    </div>
+    <div class="container">
+      <article class="column md-fill la-large">
+        <h3>Wiki Page example</h3>
+        <p>Wiki pages have lots of text that has to fit into a neat readable block. Often, they also have
+          a side bar for some additional info - like site data and statistics. Or relevant characters.
+          This data will be presented in a card format or something else.</p>
+        </p>
+      </article>
+      <article class="column small">
+        <cn-card
+          noun="adventurer"
+          title="Index Columnn"
+          snippet=""
+          class="column small"/>
+      </article>
+    </div>
+
+    <div class="container">
+      <p class="column full separator">Article / Post example</p>
+    </div>
+    <div class="container">
+      <article class="column md-fill la-large">
+        <h1 class="downscaled">My awesome post!</h1>
+        <p>Note: a post begins with H1 (this example makes the page accessibility friendly, but breaks this example page)</p>
+      </article>
+      <article class="column small">
+        <cn-card
+          noun="adventurer"
+          title="Related!"
+          cover="/proprietary/images/example_1.jpeg"
+          snippet="This post belongs to a topic, or a theme. It has a card with cover image, and a short description."
+          class="column small"/>
+      </article>
+    </div>
+</Layout>
+
+<style>
+.separator{
+  border-bottom: 1px solid var(--chroma-primary-c);
+  border-top: 1px solid var(--chroma-primary-c);
+  margin: 0;
+  padding: 6px;
+  text-align: center;
+}
+</style>
