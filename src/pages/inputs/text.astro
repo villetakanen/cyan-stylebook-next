@@ -1,0 +1,36 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="CDS / Inputs / Toggle buttons">
+  <main class="bookLayout">
+    <!-- intro card -->
+    <article class="Column small">
+      <cn-card
+        title="Text"
+        noun="card"
+        snippet="Your standard [input type='text'] style fields" />
+    </article>
+
+    <!-- Basics -->
+    <article class="Column">
+      <h1 class="downscaled">Basics</h1>
+
+      <p>We use <cyan-code>{`<input type="text"/>`}</cyan-code> for all text inputs to keep things simple and to leverage
+        browser standard functionality.</p>
+
+      <fieldset>
+        <legend>Example</legend>
+        <input type="text" placeholder="Default"/>
+        <input type="text" placeholder="Disabled" disabled/>
+        <input type="text" placeholder="Read-only" readonly/>
+        <input type="text" placeholder="Error" class="invalid"/>
+
+        <label>
+            With label
+            <input type="text" placeholder="Default"/>
+        </label>
+      </fieldset>
+    </article>
+  </main>
+</Layout>
