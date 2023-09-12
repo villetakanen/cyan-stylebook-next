@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="Surfaces">
+  <main>
+    <div class="bookLayout withBackground p-1">
+       <cn-card
+        noun="typography"
+        title="Surfaces"
+        snippet="We support 3 different container grids, default, single, and dashbaord. Each of these supports 3 different screen sizes, small, medium, and large."
+        class="column small"/>
+      <article class="column surface">
+        <h1 class="downscaled">Elements that have a surface (on top of background).</h1>
+      </article>
+    </div>
+    
+  </main>
+</Layout>
+
+<style lang="sass">
+.withBackground
+  background: linear-gradient(42deg, #445566 0%, #AACCFF 100%)
+</style>
