@@ -1,0 +1,36 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="CDS / Inputs / HTML Select input">
+  <main class="bookLayout">
+    <!-- intro card -->
+    <article class="Column small">
+      <cn-card
+        title="Text"
+        noun="card"
+        snippet="Your standard [select] style fields" />
+    </article>
+
+    <!-- Basics -->
+    <article class="Column">
+      <h1 class="downscaled">Basics</h1>
+
+      <p>We use <cyan-code>{`<select>`}</cyan-code> for selection where the options do not have to be special or typed in.
+
+      <fieldset>
+        <legend>Example</legend>
+        <select>
+          <option>Option 1</option>
+        </select>
+
+        <label>
+            With label
+            <select>
+                <option>Option 1</option>
+              </select>
+        </label>
+      </fieldset>
+    </article>
+  </main>
+</Layout>

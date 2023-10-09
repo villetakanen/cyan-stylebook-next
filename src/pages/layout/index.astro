@@ -5,15 +5,92 @@ import Layout from '../../layouts/Layout.astro';
 
 <Layout title="Cyan: App Layout">
   <main>
+    <div class="container">
+      <article class="column small">
+        <cn-card 
+          elevation="0"
+          noun="font"
+          title="App Layout"
+          snippet="Cyan comes with a set of app-layout classes and elements - to build a Material design inspired PWA -skeleton."
+        />
+      </article>
+      <article class="column large">
+        <h1>Layout</h1>
+        <p>The Cyan design system supports three distinct srcreen modes, and all of the layout components are designed
+          to gracefully adapt to the screen size.</p>
+        <p>Screen sizes are: </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Screen size</th>
+              <th>Width</th>
+              <th>CSS prefix (1</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Small</td>
+              <td>620px</td>
+              <td><cyan-code>{'sm-*'}</cyan-code></td>
+            </tr>
+            <tr>
+              <td>Medium</td>
+              <td>840px</td>
+              <td><cyan-code>{'md-*'}</cyan-code></td>
+            </tr>
+            <tr>
+              <td>Wide</td>
+              <td>1488px</td>
+              <td><cyan-code>{'wd-*'}</cyan-code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="downscaled">1) The styles and atomics with the prefix target only the given screensize. 
+          F.ex. the span between the brackets here is 
+          <cyan-code>{'<span class="sm-display-none">hidden on mobile</span>'}</cyan-code>: 
+          [<span class="sm-display-none">hidden on mobile</span>].</p>
+
+        <p>Some app layout elements behave differently in different srceen sizes.</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>Small</th>
+              <th>Medium</th>
+              <th>Wide</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <cyan-code>{'<nav class="rail">'}</cyan-code>
+              </td>
+              <td>Hidden</td>
+              <td>Fixed</td>
+              <td>Fixed</td>
+            </tr>
+            <tr>
+              <td>
+                <cyan-code>{'<cn-tray-button />'}</cyan-code>
+              </td>
+              <td>Visible</td>
+              <td>Visible</td>
+              <td>Visible</td>
+              <td class="TypeBody2 italic">You might want to have the tray button twice in the app scaffold: 
+                a copy with <cyan-code>{'class="sm-display-none"'}</cyan-code> and the second with
+                <cyan-code>{'class="md-display-none wd-display-none"'}</cyan-code></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </article>
+    </div>
+
     <div class="bookLayout">
-    <article class="small Column">
-      <cyan-card>
-        <h2 slot="title" class="downscaled">App Layout</h2>
-        <cyan-icon slot="avatar" noun="font"></cyan-icon>
-        <p class="TypeBody2">Cyan comes with a set of app-layout classes and elements - to build a 
-            Material design inspired SPA -skeleton.</p>
-      </cyan-card>
-    </article>
     <article class="Column">
         <h3>Core concepts</h3>
 
