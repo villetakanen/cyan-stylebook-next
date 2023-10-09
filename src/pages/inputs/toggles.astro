@@ -1,0 +1,28 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="CDS / Inputs / Toggle buttons">
+  <main class="bookLayout">
+    <!-- intro card -->
+    <article class="Column small">
+      <cn-card
+        title="Toggles"
+        noun="card"
+        snippet="Toggle buttons are used to switch between two states, on and off. They are used to represent a binary choice, such as on or off, yes or no, or true or false."
+      />
+    </article>
+
+    <!-- Basics -->
+    <article class="Column">
+      <h2>Basics</h2>
+
+      <p><cyan-code>{`<cn-toggle-button label="A Toggle button"/>`}</cyan-code></p>
+
+      <fieldset>
+        <legend>Example</legend>
+        <cn-toggle-button label="A Toggle button"/>
+      </fieldset>
+    </article>
+  </main>
+</Layout>

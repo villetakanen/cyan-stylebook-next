@@ -4,13 +4,13 @@ let disabled = false
 function toggleDisabled () {
   if (disabled) {
     disabled = false
-    const elems = document.querySelectorAll('cn-reaction-button, cyan-nav-button')
+    const elems = document.querySelectorAll('cn-reaction-button, cyan-nav-button, cn-toggle-button')
     elems.forEach((elem) => {
       elem.removeAttribute('disabled')
     })
   } else {
     disabled = true
-    const elems = document.querySelectorAll('cn-reaction-button, cyan-nav-button')
+    const elems = document.querySelectorAll('cn-reaction-button, cyan-nav-button, cn-toggle-button')
     elems.forEach((elem) => {
       elem.setAttribute('disabled', '')
     })
@@ -18,7 +18,7 @@ function toggleDisabled () {
 }
 </script>
 
-<cn-app-bar id="TopAppBar" sticky title="Cyan Design System">
+<cn-app-bar id="TopAppBar" sticky title="Cyan Design System" menu>
   <cyan-lightmode-toggle />
   <button onclick="toggleDisabled()">Toggle Disabled</button>
 </cn-app-bar>

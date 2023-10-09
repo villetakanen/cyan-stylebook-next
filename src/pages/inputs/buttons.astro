@@ -51,7 +51,6 @@ import Layout from '../../layouts/Layout.astro';
         </button>
       </cyan-toolbar>
         
-
       <cyan-toolbar>
         <p><cyan-code>.text</cyan-code></p>
         <button class="text">Plain</button>
@@ -63,9 +62,49 @@ import Layout from '../../layouts/Layout.astro';
           <cyan-icon noun="d6"/>
         </button>
       </cyan-toolbar>
-      </section>
 
       <button class="compact">A compact button</button>
+
+      <h3>Styled links</h3>
+      <p>As ARIA readers work better with links than buttons for transitions to off-page, 
+        it's recommended to use <cyan-code>{'<a class="button">'}</cyan-code> tags for links.</p>
+      </p>
+      
+      <div class="flex">
+        <a class="button" href="#">Plain</a>
+        <a class="button" href="#">
+          noun+text
+          <cyan-icon noun="d20" />
+        </a>
+        <a class="button" href="#" aria-label="d6">
+          <cyan-icon noun="d6"/>
+        </a>
+      </div>
+
+      <div class="flex">
+        <a class="button secondary" href="#">Plain</a>
+        <a class="button secondary" href="#">
+          noun+text
+          <cyan-icon noun="d20" />
+        </a>
+        <a class="button secondary" href="#" aria-label="d6">
+          <cyan-icon noun="d6"/>
+        </a>
+      </div>
+
+      <div class="flex">
+        <a class="button text" href="#">Plain</a>
+        <a class="button text" href="#">
+          noun+text
+          <cyan-icon noun="d20" />
+        </a>
+        <a class="button text" href="#" aria-label="d6">
+          <cyan-icon noun="d6"/>
+        </a>
+      </div>
+
+      </section>
+
 
       <h2>Icons in buttons</h2>
       <p>Buttons support <cyan-code>{'<cyan-icon [small]>'}</cyan-code> (default or small size). The recommended
