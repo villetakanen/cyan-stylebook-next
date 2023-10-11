@@ -9,10 +9,15 @@
       <li><cyan-code>{'<article class="column"></div>'}</cyan-code> as a column element</li>
       <li><cyan-code>{'<article class="column large"></div>'}</cyan-code> as a main column element</li>
       <li><cyan-code>{'<article class="column small"></div>'}</cyan-code> as a small column element</li>
+      <li><cyan-code>{'<article class="column auto'}</cyan-code> as a column that fills the container depending
+        on content size.</li>
     </ol>
     <p>The container auto-sizes to fit 2 columns, a large column wiht a small column, or a column with 2 small columns. Other
       combinations are discouraged, and will need to be managed with custom styles.</p>
     </p>
+    <p>All of the column sizes also support sm/md/wd prefixes to enable different layouts for different screen sizes.
+      For example, <cyan-code>{'<div class="column sm-small"></div>'}</cyan-code> will make the column small on small
+      screens, and default on medium and larger screens.</p>
   </article>
 
   <article class="column">
