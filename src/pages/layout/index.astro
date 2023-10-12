@@ -15,7 +15,7 @@ import Container from '../../content/layout/index/container.astro';
           snippet="Cyan comes with a set of app-layout classes and elements - to build a Material design inspired PWA -skeleton."
         />
       </article>
-      <article class="column wd-large">
+      <article class="column auto wd-large">
         <h1>Layout</h1>
         <p>The Cyan design system supports three distinct srcreen modes, and all of the layout components are designed
           to gracefully adapt to the screen size.</p>
@@ -25,24 +25,33 @@ import Container from '../../content/layout/index/container.astro';
           <thead>
             <tr>
               <th>Screen size</th>
-              <th>Width</th>
+              <th colspan="2">Width</th>
               <th>CSS prefix (1</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Small</td>
+              <td>Mobile (extra small)</td>
+              <td>0px</td>
               <td>620px</td>
+              <td><cyan-code>{'xs-*'}</cyan-code></td>
+            </tr>
+            <tr>
+              <td>Small</td>
+              <td>621px</td>
+              <td>960px</td>
               <td><cyan-code>{'sm-*'}</cyan-code></td>
             </tr>
             <tr>
               <td>Medium</td>
-              <td>840px</td>
+              <td>961px</td>
+              <td>1120px</td>
               <td><cyan-code>{'md-*'}</cyan-code></td>
             </tr>
             <tr>
               <td>Wide</td>
-              <td>1488px</td>
+              <td>1121px</td>
+              <td>∞</td>
               <td><cyan-code>{'wd-*'}</cyan-code></td>
             </tr>
           </tbody>
@@ -93,7 +102,7 @@ import Container from '../../content/layout/index/container.astro';
 
     <Container />
 
-    <div class="bookLayout">
+    <!--div class="bookLayout">
     <article class="Column">
         <h3>Core concepts</h3>
 
@@ -150,8 +159,8 @@ import Container from '../../content/layout/index/container.astro';
     <div class="bookLayout">
       <CyanNavigationTray />
     </div>
-    <cn-side-sheet>
+    <!- -cn-side-sheet>
       <h3>A side sheet</h3>
-    </cn-side-sheet>
+    </cn-side-sheet-->
   </main>
 </Layout>      
