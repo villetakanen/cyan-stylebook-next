@@ -1,10 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ElevationCard from '../../components/ElevationCard.astro';
+import Tray from '../../content/layout/tray.astro';
 ---
 <Layout title="Cards">
-  <main class="bookLayout">
-    <article class="Column">
+  <Tray />
+  <main>
+    <div class="container">
+    <article class="column">
       <h1>Cards</h1>
       <p>A card is used to highlight an entry - and show the vital data of the entry,
         on another page or in a list.
@@ -35,7 +38,7 @@ import ElevationCard from '../../components/ElevationCard.astro';
 
      </article>
 
-    <article class="Column">
+    <article class="column">
       <h2>Usage</h2>
       
       <h4 class="downscaled">Props</h4>
@@ -83,8 +86,10 @@ import ElevationCard from '../../components/ElevationCard.astro';
 
     </article>
 
+    </div>
+    <div class="container">
 
-    <article class="Column large">
+    <article class="column large">
       <h4>The card grid</h4>
       <p><cyan-code>.ItemGrid</cyan-code> helper class for a grid of <cyan-code>{'<cyan-card>'}</cyan-code>'s.</p>
         
@@ -111,8 +116,10 @@ import ElevationCard from '../../components/ElevationCard.astro';
     
 
 
-    <article class="Column small">
+    <article class="column small">
       <h3>Small card examples</h3>
+
+      <div class="flex flex-column">
 
       <cn-card
         title="Alfacon game convention returns!"
@@ -174,6 +181,8 @@ import ElevationCard from '../../components/ElevationCard.astro';
           <p>And the content should cut at n. px?</p>
         </section>
       </cn-card>
+
+      </div>
     </article>
   </main>
 </Layout>

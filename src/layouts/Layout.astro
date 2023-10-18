@@ -5,11 +5,12 @@ import AppBar from '../components/AppBar.astro';
 
 export interface Props {
 	title: string;
+	rail?: boolean;
 }
 
-const { title } = Astro.props;
+const { title, rail } = Astro.props;
 
-const production = true;
+const production = false;
 const version = '0.37.0-beta.19'
 const cyan_elements = production ? 'https://unpkg.com/@11thdeg/cyan@'+version+'/dist/cyan.js' : '/src/cyan-elements/dist/cyan.js';
 const cyan_elements_css = production ? 'https://unpkg.com/@11thdeg/cyan@'+version+'/dist/style.css' : '/src/cyan-elements/dist/style.css';
@@ -40,7 +41,7 @@ const cyan_elements_css = production ? 'https://unpkg.com/@11thdeg/cyan@'+versio
 
   <body class="cyan">
 	<Rail />
-	<Tray />
+	{ rail ? <Tray /> : '' }
 	<div class="AppLayout">
 	  <AppBar />
       <slot />

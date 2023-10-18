@@ -1,5 +1,5 @@
 <nav class="rail">
-  <cn-tray-button noun="stylebook" onchange="document.querySelector('#tray').open = !document.querySelector('#tray').open"/>
+  <cn-tray-button noun="stylebook" id="traybutton"></cn-tray-button>
   <a href="/">
     <cyan-navigation-button 
       noun="stylebook"
@@ -35,3 +35,11 @@
     noun="github"
     label="github" />
 </nav>
+
+<script>
+document.querySelector('#traybutton')?.addEventListener('change', function() {
+  const e = document.querySelector('.cn-tray') as HTMLElement;
+  e.classList.toggle('open');
+});
+
+</script>

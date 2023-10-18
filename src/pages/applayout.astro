@@ -1,11 +1,15 @@
 ---
+/**
+ * @deprecated Please remove me
+ */
+
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-  <main class="bookLayout">
+  <main class="container">
     <!-- intro card -->
-    <article class="Column small">
+    <article class="column small">
       <cn-card
         title="Layout" 
         noun="page"
@@ -13,7 +17,7 @@ import Layout from '../layouts/Layout.astro';
       </cn-card>
     </article>
     <!-- Core components -->
-    <article class="Column large">
+    <article class="column large">
       <h2>Core concepts</h2>
       <p><cyan-code>.AppLayout</cyan-code> - Class defines the main container for the app, used to make sure we 
         dont have any overflow issues, and that all app content dodges the navigation components.</p>
