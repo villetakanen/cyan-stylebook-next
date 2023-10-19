@@ -3,18 +3,19 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout title="CDS / Inputs / Buttons">
-  <main class="bookLayout">
+  <main>
+    <div class="container">
     <!-- intro card -->
-    <article class="Column small">
-      <cyan-card elevation="1">
-        <h4 slot="title">Buttons</h4>
-        <cyan-icon slot="avatar" noun="d20" />
-        <p class="TypeBody2">The humble button</p>
-      </cyan-card>
+    <article class="column small">
+      <cn-card 
+        noun="d20" 
+        title="Buttons" 
+        snippet="The humble button" 
+        elevation="0"/>
     </article>
 
     <!-- Core components -->
-    <article class="Column">
+    <article class="column">
       <h1>The Basics</h1>
 
       <p>Buttons are used to trigger actions. They are used to submit forms, open
@@ -124,8 +125,22 @@ import Layout from '../../layouts/Layout.astro';
       </toolbar>
     </article>
 
+    <article class="column">
+      <h2>Special cases<a id="specialcases"></a></h2>
+      <h3>The Navigation tray</h3>
+      <div class="surface elevation-1">
+        <h4>Examples</h4>
+        <a href="#specialcases" class="button tray-button">
+          <cyan-icon noun="admin" small />
+          A tray button</a>
+      </div>
+    </article>
+
+  </div>
+  <div class="container">
+
      <!-- Reactions -->
-     <article class="Column">
+     <article class="column">
       <h2>Reactions</h2>
       <p>Reaction buttons <cyan-code>{'<cn-reaction-button noun=[loves] [count:number] [disabled] aria-pressed=[] />'}</cyan-code>
         are used for social reactions, like "like", etc. The button has three states: disabled,
